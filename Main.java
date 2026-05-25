@@ -27,7 +27,7 @@ public class Main {
                     JOptionPane.showMessageDialog(null, "Failed to capture message. Check cell number or character length.");
                 }
             } else if (choice == 2) {
-                JOptionPane.showMessageDialog(null, "Coming Soon: Task Reports");
+                JOptionPane.showMessageDialog(null, "Total Messages Sent so far: " + Message.returnTotalMessages());
             } else if (choice == 3) {
                 running = false;
                 JOptionPane.showMessageDialog(null, "Exiting Application.");

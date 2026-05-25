@@ -11,7 +11,8 @@ public class Main {
             
             if (choiceInput == null) {
                 break;
-                    }
+                    }  
+            int choice = Integer.parseInt(choiceInput); 
                         if (choice == 1) {
                 String recipient = JOptionPane.showInputDialog("Enter Recipient Name:");
                 String cell = JOptionPane.showInputDialog("Enter Recipient Cell Number:");

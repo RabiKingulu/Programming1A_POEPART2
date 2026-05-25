@@ -49,7 +49,17 @@ public class Message {
             storeMessage();
             return "Message successfully stored";
         }
-        return "";
+        return "";}
+}     public void storeMessage() {
     }
-}
+    public String printMessageDetails() {
+        return "Message Status: Captured\n" +
+               "Recipient: " + this.recipient + "\n" +
+               "Message Number: " + this.messageNum + "\n" +
+               "Message ID: " + this.messageID + "\n" +
+               "Content: " + this.messageContent;}
+    public static int returnTotalMessages() {
+        return totalMessagesSent;}
+
+
 

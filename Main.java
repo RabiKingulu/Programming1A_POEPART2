@@ -11,11 +11,20 @@ public class Main {
             
             if (choiceInput == null) {
                 break;
-            }
-            
-            int choice = Integer.parseInt(choiceInput);
-            
-            if (choice == 1) {
+                    }
+                        if (choice == 1) {
+                String recipient = JOptionPane.showInputDialog("Enter Recipient Name:");
+                String cell = JOptionPane.showInputDialog("Enter Recipient Cell Number:");
+                String content = JOptionPane.showInputDialog("Enter Message Content:");
+                
+                Message msg = new Message(recipient, cell, content);
+                
+                if (msg.checkRecipientCell() && msg.checkMessageLang()) {
+                    msg.storeMessage();
+                    JOptionPane.showMessageDialog(null, "Message successfully captured!\n" + msg.printMessageDetails());
+                } else {
+                    JOptionPane.showMessageDialog(null, "Failed to capture message. Check cell number or character length.");
+                }
             } else if (choice == 2) {
                 JOptionPane.showMessageDialog(null, "Coming Soon: Task Reports");
             } else if (choice == 3) {
@@ -25,3 +34,5 @@ public class Main {
         }
     }
 }
+
+            
